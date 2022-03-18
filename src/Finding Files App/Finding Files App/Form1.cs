@@ -29,7 +29,11 @@ namespace Finding_Files_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                label6.Text = dialog.SelectedPath;
+            } 
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -53,6 +57,11 @@ namespace Finding_Files_App
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
