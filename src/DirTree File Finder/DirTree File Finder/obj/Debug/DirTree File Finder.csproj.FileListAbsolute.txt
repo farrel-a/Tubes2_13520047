@@ -1,0 +1,11 @@
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.exe.config
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.exe
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.pdb
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.AssemblyReference.cache
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.SuggestedBindingRedirects.cache
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree_File_Finder.MainForm.resources
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree_File_Finder.Properties.Resources.resources
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.GenerateResource.cache
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CoreCompileInputs.cache
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.exe
+C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.pdb
