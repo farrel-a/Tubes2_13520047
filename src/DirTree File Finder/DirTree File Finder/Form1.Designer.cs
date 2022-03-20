@@ -53,6 +53,8 @@
             this.PanelOutputTree = new System.Windows.Forms.Panel();
             this.LabelOutput = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelInput.SuspendLayout();
@@ -261,6 +263,7 @@
             // PanelOutput
             // 
             this.PanelOutput.BackColor = System.Drawing.Color.Pink;
+            this.PanelOutput.Controls.Add(this.listBox1);
             this.PanelOutput.Controls.Add(this.LabelTimeSpent);
             this.PanelOutput.Controls.Add(this.linkLabel1);
             this.PanelOutput.Controls.Add(this.LabelPathFile);
@@ -321,6 +324,15 @@
             this.LabelOutput.TabIndex = 0;
             this.LabelOutput.Text = "Output";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(22, 438);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(472, 84);
+            this.listBox1.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -373,6 +385,8 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label LabelPathFile;
         private System.Windows.Forms.Panel PanelOutputTree;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

@@ -46,6 +46,20 @@ namespace DirTree_File_Finder
                 }
             }
         }
-    
+        public void search_in()
+        {
+            scan_directory(this.dir);
+        }
+        public string Term
+        {
+            set { term = value; }
+            get { return this.term;  }
+        }
+        
+        public string Dir
+        {
+            set { dir = value; }
+            get { return this.dir;  }
+        }
     }
 }

@@ -12,9 +12,32 @@ namespace DirTree_File_Finder
 {
     public partial class MainForm : Form
     {
+        private Base_Class_Searcher base_class_searcher;
         public MainForm()
         {
             InitializeComponent();
+            this.base_class_searcher = new Base_Class_Searcher(null, null);
+            this.base_class_searcher.FileLocation += FileFound;
+            backgroundWorker1.DoWork += Background_Worker;
+            backgroundWorker1.RunWorkerCompleted += Completed;
+      
+        }
+
+        private void FileFound(string path)
+        {
+            listBox1.BeginInvoke((Action)delegate ()
+           {
+               listBox1.Items.Add(path);
+           });
+        }
+        private void Completed(object sender, RunWorkerCompletedEventArgs args)
+        {
+            MessageBox.Show("Done");
+        }
+
+        private void Background_Worker(object sender,DoWorkEventArgs args)
+        {
+            base_class_searcher.search_in();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -45,6 +68,9 @@ namespace DirTree_File_Finder
 
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
+            this.base_class_searcher.Term = TextBoxInputFileName.Text;
+            this.base_class_searcher.Dir = LabelDirectory.Text;
+            backgroundWorker1.RunWorkerAsync();
             if (RadioButtonBFS.Checked)
             {
                 
