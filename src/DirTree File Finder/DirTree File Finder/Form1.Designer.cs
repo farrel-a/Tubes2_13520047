@@ -34,25 +34,25 @@
             this.Logo = new System.Windows.Forms.PictureBox();
             this.AppName = new System.Windows.Forms.Label();
             this.PanelInput = new System.Windows.Forms.Panel();
+            this.ButtonSearch = new System.Windows.Forms.Button();
+            this.RadioButtonDFS = new System.Windows.Forms.RadioButton();
+            this.RadioButtonBFS = new System.Windows.Forms.RadioButton();
+            this.LabelInputMetodePencarian = new System.Windows.Forms.Label();
+            this.CheckBoxFindAllOccurence = new System.Windows.Forms.CheckBox();
+            this.ExampleLabel = new System.Windows.Forms.Label();
+            this.TextBoxInputFileName = new System.Windows.Forms.TextBox();
+            this.LabelInputFileName = new System.Windows.Forms.Label();
             this.LabelDirectory = new System.Windows.Forms.Label();
             this.ButtonChooseFolder = new System.Windows.Forms.Button();
             this.LabelStartingDirectory = new System.Windows.Forms.Label();
             this.LabelInput = new System.Windows.Forms.Label();
             this.PanelOutput = new System.Windows.Forms.Panel();
+            this.LabelTimeSpent = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.LabelPathFile = new System.Windows.Forms.Label();
+            this.PanelOutputTree = new System.Windows.Forms.Panel();
             this.LabelOutput = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.LabelInputFileName = new System.Windows.Forms.Label();
-            this.TextBoxInputFileName = new System.Windows.Forms.TextBox();
-            this.ExampleLabel = new System.Windows.Forms.Label();
-            this.CheckBoxFindAllOccurence = new System.Windows.Forms.CheckBox();
-            this.LabelInputMetodePencarian = new System.Windows.Forms.Label();
-            this.RadioButtonBFS = new System.Windows.Forms.RadioButton();
-            this.RadioButtonDFS = new System.Windows.Forms.RadioButton();
-            this.ButtonSearch = new System.Windows.Forms.Button();
-            this.PanelOutputTree = new System.Windows.Forms.Panel();
-            this.LabelPathFile = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.LabelTimeSpent = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelInput.SuspendLayout();
@@ -124,6 +124,95 @@
             this.PanelInput.Size = new System.Drawing.Size(288, 554);
             this.PanelInput.TabIndex = 1;
             // 
+            // ButtonSearch
+            // 
+            this.ButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonSearch.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSearch.Location = new System.Drawing.Point(12, 467);
+            this.ButtonSearch.Name = "ButtonSearch";
+            this.ButtonSearch.Size = new System.Drawing.Size(253, 34);
+            this.ButtonSearch.TabIndex = 7;
+            this.ButtonSearch.Text = "Search";
+            this.ButtonSearch.UseVisualStyleBackColor = true;
+            this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
+            // 
+            // RadioButtonDFS
+            // 
+            this.RadioButtonDFS.AutoSize = true;
+            this.RadioButtonDFS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RadioButtonDFS.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonDFS.Location = new System.Drawing.Point(12, 426);
+            this.RadioButtonDFS.Name = "RadioButtonDFS";
+            this.RadioButtonDFS.Size = new System.Drawing.Size(62, 23);
+            this.RadioButtonDFS.TabIndex = 6;
+            this.RadioButtonDFS.TabStop = true;
+            this.RadioButtonDFS.Text = "DFS";
+            this.RadioButtonDFS.UseVisualStyleBackColor = true;
+            // 
+            // RadioButtonBFS
+            // 
+            this.RadioButtonBFS.AutoSize = true;
+            this.RadioButtonBFS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RadioButtonBFS.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonBFS.Location = new System.Drawing.Point(12, 396);
+            this.RadioButtonBFS.Name = "RadioButtonBFS";
+            this.RadioButtonBFS.Size = new System.Drawing.Size(60, 23);
+            this.RadioButtonBFS.TabIndex = 5;
+            this.RadioButtonBFS.TabStop = true;
+            this.RadioButtonBFS.Text = "BFS";
+            this.RadioButtonBFS.UseVisualStyleBackColor = true;
+            // 
+            // LabelInputMetodePencarian
+            // 
+            this.LabelInputMetodePencarian.AutoSize = true;
+            this.LabelInputMetodePencarian.Font = new System.Drawing.Font("Leelawadee", 8F);
+            this.LabelInputMetodePencarian.Location = new System.Drawing.Point(13, 360);
+            this.LabelInputMetodePencarian.Name = "LabelInputMetodePencarian";
+            this.LabelInputMetodePencarian.Size = new System.Drawing.Size(174, 19);
+            this.LabelInputMetodePencarian.TabIndex = 1;
+            this.LabelInputMetodePencarian.Text = "Input metode pencarian";
+            // 
+            // CheckBoxFindAllOccurence
+            // 
+            this.CheckBoxFindAllOccurence.AutoSize = true;
+            this.CheckBoxFindAllOccurence.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CheckBoxFindAllOccurence.Font = new System.Drawing.Font("Leelawadee", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxFindAllOccurence.Location = new System.Drawing.Point(12, 315);
+            this.CheckBoxFindAllOccurence.Name = "CheckBoxFindAllOccurence";
+            this.CheckBoxFindAllOccurence.Size = new System.Drawing.Size(141, 21);
+            this.CheckBoxFindAllOccurence.TabIndex = 1;
+            this.CheckBoxFindAllOccurence.Text = "FindAllOccurence";
+            this.CheckBoxFindAllOccurence.UseVisualStyleBackColor = true;
+            // 
+            // ExampleLabel
+            // 
+            this.ExampleLabel.AutoSize = true;
+            this.ExampleLabel.Font = new System.Drawing.Font("Leelawadee", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExampleLabel.Location = new System.Drawing.Point(13, 277);
+            this.ExampleLabel.Name = "ExampleLabel";
+            this.ExampleLabel.Size = new System.Drawing.Size(164, 14);
+            this.ExampleLabel.TabIndex = 4;
+            this.ExampleLabel.Text = "e.g. \"algorithm strategies.pdf\"";
+            // 
+            // TextBoxInputFileName
+            // 
+            this.TextBoxInputFileName.Font = new System.Drawing.Font("Leelawadee", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxInputFileName.Location = new System.Drawing.Point(12, 236);
+            this.TextBoxInputFileName.Name = "TextBoxInputFileName";
+            this.TextBoxInputFileName.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.TextBoxInputFileName.Size = new System.Drawing.Size(253, 24);
+            this.TextBoxInputFileName.TabIndex = 1;
+            // 
+            // LabelInputFileName
+            // 
+            this.LabelInputFileName.AutoSize = true;
+            this.LabelInputFileName.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelInputFileName.Location = new System.Drawing.Point(12, 201);
+            this.LabelInputFileName.Name = "LabelInputFileName";
+            this.LabelInputFileName.Size = new System.Drawing.Size(113, 19);
+            this.LabelInputFileName.TabIndex = 1;
+            this.LabelInputFileName.Text = "Input file name";
+            // 
             // LabelDirectory
             // 
             this.LabelDirectory.AllowDrop = true;
@@ -183,121 +272,16 @@
             this.PanelOutput.Size = new System.Drawing.Size(506, 554);
             this.PanelOutput.TabIndex = 2;
             // 
-            // LabelOutput
+            // LabelTimeSpent
             // 
-            this.LabelOutput.AutoSize = true;
-            this.LabelOutput.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelOutput.Location = new System.Drawing.Point(216, 17);
-            this.LabelOutput.Name = "LabelOutput";
-            this.LabelOutput.Size = new System.Drawing.Size(89, 29);
-            this.LabelOutput.TabIndex = 0;
-            this.LabelOutput.Text = "Output";
-            // 
-            // LabelInputFileName
-            // 
-            this.LabelInputFileName.AutoSize = true;
-            this.LabelInputFileName.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelInputFileName.Location = new System.Drawing.Point(12, 201);
-            this.LabelInputFileName.Name = "LabelInputFileName";
-            this.LabelInputFileName.Size = new System.Drawing.Size(113, 19);
-            this.LabelInputFileName.TabIndex = 1;
-            this.LabelInputFileName.Text = "Input file name";
-            // 
-            // TextBoxInputFileName
-            // 
-            this.TextBoxInputFileName.Font = new System.Drawing.Font("Leelawadee", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxInputFileName.Location = new System.Drawing.Point(12, 236);
-            this.TextBoxInputFileName.Name = "TextBoxInputFileName";
-            this.TextBoxInputFileName.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.TextBoxInputFileName.Size = new System.Drawing.Size(253, 24);
-            this.TextBoxInputFileName.TabIndex = 1;
-            // 
-            // ExampleLabel
-            // 
-            this.ExampleLabel.AutoSize = true;
-            this.ExampleLabel.Font = new System.Drawing.Font("Leelawadee", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExampleLabel.Location = new System.Drawing.Point(13, 277);
-            this.ExampleLabel.Name = "ExampleLabel";
-            this.ExampleLabel.Size = new System.Drawing.Size(164, 14);
-            this.ExampleLabel.TabIndex = 4;
-            this.ExampleLabel.Text = "e.g. \"algorithm strategies.pdf\"";
-            // 
-            // CheckBoxFindAllOccurence
-            // 
-            this.CheckBoxFindAllOccurence.AutoSize = true;
-            this.CheckBoxFindAllOccurence.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CheckBoxFindAllOccurence.Font = new System.Drawing.Font("Leelawadee", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxFindAllOccurence.Location = new System.Drawing.Point(12, 315);
-            this.CheckBoxFindAllOccurence.Name = "CheckBoxFindAllOccurence";
-            this.CheckBoxFindAllOccurence.Size = new System.Drawing.Size(141, 21);
-            this.CheckBoxFindAllOccurence.TabIndex = 1;
-            this.CheckBoxFindAllOccurence.Text = "FindAllOccurence";
-            this.CheckBoxFindAllOccurence.UseVisualStyleBackColor = true;
-            // 
-            // LabelInputMetodePencarian
-            // 
-            this.LabelInputMetodePencarian.AutoSize = true;
-            this.LabelInputMetodePencarian.Font = new System.Drawing.Font("Leelawadee", 8F);
-            this.LabelInputMetodePencarian.Location = new System.Drawing.Point(13, 360);
-            this.LabelInputMetodePencarian.Name = "LabelInputMetodePencarian";
-            this.LabelInputMetodePencarian.Size = new System.Drawing.Size(174, 19);
-            this.LabelInputMetodePencarian.TabIndex = 1;
-            this.LabelInputMetodePencarian.Text = "Input metode pencarian";
-            // 
-            // RadioButtonBFS
-            // 
-            this.RadioButtonBFS.AutoSize = true;
-            this.RadioButtonBFS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RadioButtonBFS.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioButtonBFS.Location = new System.Drawing.Point(12, 396);
-            this.RadioButtonBFS.Name = "RadioButtonBFS";
-            this.RadioButtonBFS.Size = new System.Drawing.Size(60, 23);
-            this.RadioButtonBFS.TabIndex = 5;
-            this.RadioButtonBFS.TabStop = true;
-            this.RadioButtonBFS.Text = "BFS";
-            this.RadioButtonBFS.UseVisualStyleBackColor = true;
-            // 
-            // RadioButtonDFS
-            // 
-            this.RadioButtonDFS.AutoSize = true;
-            this.RadioButtonDFS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RadioButtonDFS.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadioButtonDFS.Location = new System.Drawing.Point(12, 426);
-            this.RadioButtonDFS.Name = "RadioButtonDFS";
-            this.RadioButtonDFS.Size = new System.Drawing.Size(62, 23);
-            this.RadioButtonDFS.TabIndex = 6;
-            this.RadioButtonDFS.TabStop = true;
-            this.RadioButtonDFS.Text = "DFS";
-            this.RadioButtonDFS.UseVisualStyleBackColor = true;
-            // 
-            // ButtonSearch
-            // 
-            this.ButtonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonSearch.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSearch.Location = new System.Drawing.Point(12, 467);
-            this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(253, 34);
-            this.ButtonSearch.TabIndex = 7;
-            this.ButtonSearch.Text = "Search";
-            this.ButtonSearch.UseVisualStyleBackColor = true;
-            // 
-            // PanelOutputTree
-            // 
-            this.PanelOutputTree.BackColor = System.Drawing.Color.LavenderBlush;
-            this.PanelOutputTree.Location = new System.Drawing.Point(31, 76);
-            this.PanelOutputTree.Name = "PanelOutputTree";
-            this.PanelOutputTree.Size = new System.Drawing.Size(439, 343);
-            this.PanelOutputTree.TabIndex = 1;
-            // 
-            // LabelPathFile
-            // 
-            this.LabelPathFile.AutoSize = true;
-            this.LabelPathFile.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPathFile.Location = new System.Drawing.Point(27, 439);
-            this.LabelPathFile.Name = "LabelPathFile";
-            this.LabelPathFile.Size = new System.Drawing.Size(65, 19);
-            this.LabelPathFile.TabIndex = 2;
-            this.LabelPathFile.Text = "Path file";
+            this.LabelTimeSpent.AutoSize = true;
+            this.LabelTimeSpent.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTimeSpent.Location = new System.Drawing.Point(27, 503);
+            this.LabelTimeSpent.Name = "LabelTimeSpent";
+            this.LabelTimeSpent.Size = new System.Drawing.Size(85, 19);
+            this.LabelTimeSpent.TabIndex = 4;
+            this.LabelTimeSpent.Text = "Time spent";
+            this.LabelTimeSpent.Click += new System.EventHandler(this.LabelTimeSpent_Click);
             // 
             // linkLabel1
             // 
@@ -309,16 +293,33 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
             // 
-            // LabelTimeSpent
+            // LabelPathFile
             // 
-            this.LabelTimeSpent.AutoSize = true;
-            this.LabelTimeSpent.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimeSpent.Location = new System.Drawing.Point(27, 503);
-            this.LabelTimeSpent.Name = "LabelTimeSpent";
-            this.LabelTimeSpent.Size = new System.Drawing.Size(85, 19);
-            this.LabelTimeSpent.TabIndex = 4;
-            this.LabelTimeSpent.Text = "Time spent";
-            this.LabelTimeSpent.Click += new System.EventHandler(this.LabelTimeSpent_Click);
+            this.LabelPathFile.AutoSize = true;
+            this.LabelPathFile.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPathFile.Location = new System.Drawing.Point(27, 439);
+            this.LabelPathFile.Name = "LabelPathFile";
+            this.LabelPathFile.Size = new System.Drawing.Size(65, 19);
+            this.LabelPathFile.TabIndex = 2;
+            this.LabelPathFile.Text = "Path file";
+            // 
+            // PanelOutputTree
+            // 
+            this.PanelOutputTree.BackColor = System.Drawing.Color.LavenderBlush;
+            this.PanelOutputTree.Location = new System.Drawing.Point(31, 76);
+            this.PanelOutputTree.Name = "PanelOutputTree";
+            this.PanelOutputTree.Size = new System.Drawing.Size(439, 343);
+            this.PanelOutputTree.TabIndex = 1;
+            // 
+            // LabelOutput
+            // 
+            this.LabelOutput.AutoSize = true;
+            this.LabelOutput.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelOutput.Location = new System.Drawing.Point(216, 17);
+            this.LabelOutput.Name = "LabelOutput";
+            this.LabelOutput.Size = new System.Drawing.Size(89, 29);
+            this.LabelOutput.TabIndex = 0;
+            this.LabelOutput.Text = "Output";
             // 
             // MainForm
             // 
