@@ -17,7 +17,7 @@ namespace DirTree_File_Finder
         public BFS(string filename, string current_path) : base(filename, current_path) { }
 
         //Methods
-        public void findFileBFS(string current_path)
+        public void findFileBFS(string current_path, bool findAllOccurrences)
         {
             //Add BFS Algorithm here
         }

@@ -12,31 +12,47 @@ namespace DirTree_File_Finder
     {
         //Attributes
         public event FilePathFound FileLocation;
+        private bool findAllOccurrences;
+        private bool fileIsFound;
 
         //CTOR
-        public DFS(string filename, string current_path) : base(filename, current_path) { }
+        public DFS(string filename, string current_path) : base(filename, current_path) 
+        {
+            //default
+            this.findAllOccurrences = false;
+            this.fileIsFound = false;
+        }
 
         //Methods
-        public void findFileDFS(string current_path)
+        public void findFileDFS(string current_path, bool findAllOccurrences)
         {
+            this.findAllOccurrences = findAllOccurrences;
             List<string> contents = findContents(current_path);  //all content (files and dirs) in a form of abs. path
             foreach(string c in contents)                        //for every content (path) in contents
             {
-                //Add to search_log
-                this.search_log.Add(c);
-
-                //To Debug
-                //Debug.WriteLine(c);
-                
-                //Search directory first, findContents already sorted by dir first then file
-                if (Directory.Exists(c) && (c != "." || c != ".."))
+                if (this.fileIsFound && !this.findAllOccurrences)
                 {
-                    this.findFileDFS(c);    //if path c is a directory, go to inside c
-                    continue;
+                    break;
                 }
-                else if (c.ToLower().Contains(this.filename.ToLower()))
+                else
                 {
-                    this.FileLocation(c); //path c is a file found
+                    //Add to search_log
+                    this.search_log.Add(c);
+
+                    //To Debug
+                    //Debug.WriteLine(c);
+                
+                    //Search directory first, findContents already sorted by dir first then file
+                    if (Directory.Exists(c) && (c != "." || c != ".."))
+                    {
+                        this.findFileDFS(c, this.findAllOccurrences);    //if path c is a directory, go to inside c
+                        continue;
+                    }
+                    else if (c.ToLower().Contains(this.filename.ToLower()))
+                    {
+                        this.FileLocation(c); //path c is a file found
+                        this.fileIsFound = true;
+                    }
                 }
             }
         }

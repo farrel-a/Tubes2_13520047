@@ -51,7 +51,8 @@ namespace DirTree_File_Finder
 
             if (RadioButtonDFS.Checked)
             {
-                dfs_method.findFileDFS(dfs_method.Current_path);
+                //true = find all occurrences
+                dfs_method.findFileDFS(dfs_method.Current_path, true);
             }   
         }
 
