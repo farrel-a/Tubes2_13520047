@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace DirTree_File_Finder
 {
@@ -96,6 +97,11 @@ namespace DirTree_File_Finder
             this.dfs_method.Filename = TextBoxInputFileName.Text;
             this.dfs_method.Current_path = LabelDirectory.Text;
             backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Process.Start(listBox1.SelectedItem.ToString());
         }
     }
 }

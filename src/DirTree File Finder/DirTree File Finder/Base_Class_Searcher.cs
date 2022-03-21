@@ -25,11 +25,11 @@ namespace DirTree_File_Finder
 
         public List<string> findContents(string path)
         {
-            string[] dirs = Directory.GetDirectories(path);
-            string[] files = Directory.GetFiles(path);
+            string[] dirs_path = Directory.GetDirectories(path);
+            string[] files_path = Directory.GetFiles(path);
             List<string> contents = new List<string>();
-            contents.AddRange(dirs);
-            contents.AddRange(files);
+            contents.AddRange(dirs_path);
+            contents.AddRange(files_path);
             return contents;
         }
 

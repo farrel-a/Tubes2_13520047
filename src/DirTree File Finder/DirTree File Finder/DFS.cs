@@ -16,7 +16,7 @@ namespace DirTree_File_Finder
         private bool fileIsFound;
 
         //CTOR
-        public DFS(string filename, string current_path) : base(filename, current_path) 
+        public DFS(string filename, string current_path) : base(filename, current_path)
         {
             //default
             this.findAllOccurrences = false;
@@ -28,7 +28,7 @@ namespace DirTree_File_Finder
         {
             this.findAllOccurrences = findAllOccurrences;
             List<string> contents = findContents(current_path);  //all content (files and dirs) in a form of abs. path
-            foreach(string c in contents)                        //for every content (path) in contents
+            foreach (string c in contents)                        //for every content (path) in contents
             {
                 if (this.fileIsFound && !this.findAllOccurrences)
                 {
@@ -41,14 +41,14 @@ namespace DirTree_File_Finder
 
                     //To Debug
                     //Debug.WriteLine(c);
-                
+
                     //Search directory first, findContents already sorted by dir first then file
                     if (Directory.Exists(c) && (c != "." || c != ".."))
                     {
                         this.findFileDFS(c, this.findAllOccurrences);    //if path c is a directory, go to inside c
                         continue;
-                    }
-                    else if (c.ToLower().Contains(this.filename.ToLower()))
+                    } // c.ToLower().Contains(this.filename.ToLower())
+                    else if ((Path.GetFileName(c)).Equals(this.filename))
                     {
                         this.FileLocation(c); //path c is a file found
                         this.fileIsFound = true;
