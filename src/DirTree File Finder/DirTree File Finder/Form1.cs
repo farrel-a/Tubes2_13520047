@@ -44,6 +44,15 @@ namespace DirTree_File_Finder
 
         private void Background_Worker(object sender,DoWorkEventArgs args)
         {
+            bool findAll;
+            if (CheckBoxFindAllOccurence.Checked)
+            {
+                findAll = true;
+            } else
+            {
+                findAll = false;
+            }
+
             if (RadioButtonBFS.Checked)
             {
                 //add BFS here
@@ -52,7 +61,7 @@ namespace DirTree_File_Finder
             if (RadioButtonDFS.Checked)
             {
                 //true = find all occurrences
-                dfs_method.findFileDFS(dfs_method.Current_path, true);
+                dfs_method.findFileDFS(dfs_method.Current_path, findAll);
             }   
         }
 
@@ -87,15 +96,6 @@ namespace DirTree_File_Finder
             this.dfs_method.Filename = TextBoxInputFileName.Text;
             this.dfs_method.Current_path = LabelDirectory.Text;
             backgroundWorker1.RunWorkerAsync();
-            if (RadioButtonBFS.Checked)
-            {
-                
-            }
-
-            if (RadioButtonDFS.Checked)
-            {
-
-            }
         }
     }
 }

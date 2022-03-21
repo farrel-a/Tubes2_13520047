@@ -47,6 +47,7 @@
             this.LabelStartingDirectory = new System.Windows.Forms.Label();
             this.LabelInput = new System.Windows.Forms.Label();
             this.PanelOutput = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.LabelTimeSpent = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.LabelPathFile = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.LabelOutput = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelInput.SuspendLayout();
@@ -181,9 +181,9 @@
             this.CheckBoxFindAllOccurence.Font = new System.Drawing.Font("Leelawadee", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckBoxFindAllOccurence.Location = new System.Drawing.Point(12, 315);
             this.CheckBoxFindAllOccurence.Name = "CheckBoxFindAllOccurence";
-            this.CheckBoxFindAllOccurence.Size = new System.Drawing.Size(141, 21);
+            this.CheckBoxFindAllOccurence.Size = new System.Drawing.Size(144, 21);
             this.CheckBoxFindAllOccurence.TabIndex = 1;
-            this.CheckBoxFindAllOccurence.Text = "FindAllOccurence";
+            this.CheckBoxFindAllOccurence.Text = "Find all occurence";
             this.CheckBoxFindAllOccurence.UseVisualStyleBackColor = true;
             // 
             // ExampleLabel
@@ -275,6 +275,15 @@
             this.PanelOutput.Size = new System.Drawing.Size(506, 554);
             this.PanelOutput.TabIndex = 2;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(22, 438);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(472, 84);
+            this.listBox1.TabIndex = 5;
+            // 
             // LabelTimeSpent
             // 
             this.LabelTimeSpent.AutoSize = true;
@@ -323,15 +332,6 @@
             this.LabelOutput.Size = new System.Drawing.Size(89, 29);
             this.LabelOutput.TabIndex = 0;
             this.LabelOutput.Text = "Output";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(22, 438);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(472, 84);
-            this.listBox1.TabIndex = 5;
             // 
             // MainForm
             // 
