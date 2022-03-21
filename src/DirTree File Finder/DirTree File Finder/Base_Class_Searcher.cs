@@ -15,6 +15,7 @@ namespace DirTree_File_Finder
        protected string current_path;     // in absolute
        protected List<string> search_log; // search path log
 
+       //Methods
        public Base_Class_Searcher(string filename, string current_path)
         {
             this.filename = filename;
