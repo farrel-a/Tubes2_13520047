@@ -10,14 +10,21 @@ using System.Windows.Forms;
 
 namespace DirTree_File_Finder
 {
+    delegate void FilePathFound(string path);
+
     public partial class MainForm : Form
     {
-        private Base_Class_Searcher base_class_searcher;
+        private DFS dfs_method;
+        // Add BFS here (follow like DFS)
+
         public MainForm()
         {
             InitializeComponent();
-            this.base_class_searcher = new Base_Class_Searcher(null, null);
-            this.base_class_searcher.FileLocation += FileFound;
+            this.dfs_method = new DFS(null, null);
+            this.dfs_method.FileLocation += FileFound;
+
+            // Add BFS here (follow like DFS)
+
             backgroundWorker1.DoWork += Background_Worker;
             backgroundWorker1.RunWorkerCompleted += Completed;
       
@@ -37,7 +44,15 @@ namespace DirTree_File_Finder
 
         private void Background_Worker(object sender,DoWorkEventArgs args)
         {
-            base_class_searcher.search_in();
+            if (RadioButtonBFS.Checked)
+            {
+                //add BFS here
+            }
+
+            if (RadioButtonDFS.Checked)
+            {
+                dfs_method.findFileDFS(dfs_method.Current_path);
+            }   
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -68,8 +83,8 @@ namespace DirTree_File_Finder
 
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            this.base_class_searcher.Term = TextBoxInputFileName.Text;
-            this.base_class_searcher.Dir = LabelDirectory.Text;
+            this.dfs_method.Filename = TextBoxInputFileName.Text;
+            this.dfs_method.Current_path = LabelDirectory.Text;
             backgroundWorker1.RunWorkerAsync();
             if (RadioButtonBFS.Checked)
             {

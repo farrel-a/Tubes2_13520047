@@ -9,3 +9,13 @@ C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File 
 C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CoreCompileInputs.cache
 C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.exe
 C:\Users\HANA\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.pdb
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.exe.config
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.exe
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.pdb
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.AssemblyReference.cache
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree_File_Finder.MainForm.resources
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree_File_Finder.Properties.Resources.resources
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.GenerateResource.cache
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CoreCompileInputs.cache
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.exe
+C:\Users\Farrel Ahmad\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.pdb

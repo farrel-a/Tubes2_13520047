@@ -4,62 +4,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 
 namespace DirTree_File_Finder
 {
-    delegate void FilePathFound(string path);
     class Base_Class_Searcher
     {
-        private string term;
-        private string dir;
+       //Attributes
+       protected string filename;         // filename
+       protected string current_path;     // in absolute
+       protected List<string> search_log; // search path log
 
-        public event FilePathFound FileLocation;
-        public Base_Class_Searcher(string dir, string term)
+       public Base_Class_Searcher(string filename, string current_path)
         {
-            this.dir = dir;
-            this.term = term;
+            this.filename = filename;
+            this.current_path = current_path;
+            this.search_log = new List<string>();
         }
 
-        private void scan_directory(string dir)
+        public List<string> findContents(string path)
         {
-            string[] files = Directory.GetFiles(dir);
-            string[] dirs = Directory.GetDirectories(dir);
-
-            List<string> insideDirectory = new List<string>();
-            insideDirectory.AddRange(files);
-            insideDirectory.AddRange(dirs);
-        
-            foreach (string s in insideDirectory)
-            {
-                string _s = s.ToLower();
-                string _term = this.term.ToLower();
-
-                if (Directory.Exists(s) && s != "." && s != "..")
-                {
-                    scan_directory(s);
-                    continue;
-                }
-
-                if (_s.Contains(_term))
-                {
-                    FileLocation(s);
-                }
-            }
+            string[] dirs = Directory.GetDirectories(path);
+            string[] files = Directory.GetFiles(path);
+            List<string> contents = new List<string>();
+            contents.AddRange(dirs);
+            contents.AddRange(files);
+            return contents;
         }
-        public void search_in()
+
+        public string Filename
         {
-            scan_directory(this.dir);
-        }
-        public string Term
-        {
-            set { term = value; }
-            get { return this.term;  }
+            set { this.filename = value; }
+            get { return this.filename;  }
         }
         
-        public string Dir
+        public string Current_path
         {
-            set { dir = value; }
-            get { return this.dir;  }
+            set { this.current_path = value; }
+            get { return this.current_path;  }
+        }
+
+        public List<string> Search_log
+        {
+            set { this.search_log = value;}
+            get { return this.search_log;}
         }
     }
 }
