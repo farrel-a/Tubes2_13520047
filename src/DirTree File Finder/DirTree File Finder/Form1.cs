@@ -20,6 +20,7 @@ namespace DirTree_File_Finder
 
         public MainForm()
         {
+            
             InitializeComponent();
             this.dfs_method = new DFS(null, null);
             this.dfs_method.FileLocation += FileFound;
@@ -28,7 +29,7 @@ namespace DirTree_File_Finder
 
             backgroundWorker1.DoWork += Background_Worker;
             backgroundWorker1.RunWorkerCompleted += Completed;
-      
+
         }
 
         private void FileFound(string path)
@@ -40,7 +41,14 @@ namespace DirTree_File_Finder
         }
         private void Completed(object sender, RunWorkerCompletedEventArgs args)
         {
-            MessageBox.Show("Done");
+            if (listBox1.Items.Count > 0)
+            {
+                MessageBox.Show("Done");
+            }
+            else
+            {
+                MessageBox.Show("File not found");
+            }
         }
 
         private void Background_Worker(object sender,DoWorkEventArgs args)
@@ -94,6 +102,7 @@ namespace DirTree_File_Finder
 
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             this.dfs_method.Filename = TextBoxInputFileName.Text;
             this.dfs_method.Current_path = LabelDirectory.Text;
             backgroundWorker1.RunWorkerAsync();

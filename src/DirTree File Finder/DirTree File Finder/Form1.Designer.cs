@@ -277,12 +277,13 @@
             // 
             // listBox1
             // 
+            this.listBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(22, 438);
+            this.listBox1.Location = new System.Drawing.Point(14, 417);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
             this.listBox1.Size = new System.Drawing.Size(472, 84);
@@ -293,7 +294,7 @@
             // 
             this.LabelTimeSpent.AutoSize = true;
             this.LabelTimeSpent.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimeSpent.Location = new System.Drawing.Point(27, 503);
+            this.LabelTimeSpent.Location = new System.Drawing.Point(22, 517);
             this.LabelTimeSpent.Name = "LabelTimeSpent";
             this.LabelTimeSpent.Size = new System.Drawing.Size(85, 19);
             this.LabelTimeSpent.TabIndex = 4;
@@ -325,7 +326,7 @@
             this.PanelOutputTree.BackColor = System.Drawing.Color.LavenderBlush;
             this.PanelOutputTree.Location = new System.Drawing.Point(31, 76);
             this.PanelOutputTree.Name = "PanelOutputTree";
-            this.PanelOutputTree.Size = new System.Drawing.Size(439, 343);
+            this.PanelOutputTree.Size = new System.Drawing.Size(439, 323);
             this.PanelOutputTree.TabIndex = 1;
             // 
             // LabelOutput
