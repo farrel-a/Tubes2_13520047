@@ -15,6 +15,10 @@ namespace DirTree_File_Finder
 
     public partial class MainForm : Form
     {
+        
+        private double DFSTime;
+        // Add BFSTime here (follow like DFS)
+
         private DFS dfs_method;
         // Add BFS here (follow like DFS)
 
@@ -69,8 +73,19 @@ namespace DirTree_File_Finder
 
             if (RadioButtonDFS.Checked)
             {
-                //true = find all occurrences
+                // Create stopwatch
+                Stopwatch stopwatch = new Stopwatch();
+                // Start stopwatch
+                stopwatch.Start();
+                // true = find all occurrences
                 dfs_method.findFileDFS(dfs_method.Current_path, true, findAll);
+                // Stop stopwatch
+                stopwatch.Stop();
+                // Elapsed time
+                this.DFSTime = stopwatch.Elapsed.TotalSeconds; //in seconds
+                // To see in console
+                //Debug.WriteLine(this.DFSTime);
+
             }   
         }
 

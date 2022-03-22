@@ -51,3 +51,18 @@ C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\Tubes 2 fix\Tubes2_13520047\src\
 C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\Tubes 2 fix\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CopyComplete
 C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\Tubes 2 fix\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.exe
 C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\Tubes 2 fix\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.pdb
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.exe.config
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.exe
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.pdb
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\AutomaticGraphLayout.dll
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\AutomaticGraphLayout.Drawing.dll
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\Microsoft.Msagl.WpfGraphControl.dll
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.AssemblyReference.cache
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree_File_Finder.MainForm.resources
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree_File_Finder.Properties.Resources.resources
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.GenerateResource.cache
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CoreCompileInputs.cache
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CopyComplete
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.exe
+C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.pdb
