@@ -70,7 +70,7 @@ namespace DirTree_File_Finder
             if (RadioButtonDFS.Checked)
             {
                 //true = find all occurrences
-                dfs_method.findFileDFS(dfs_method.Current_path, findAll);
+                dfs_method.findFileDFS(dfs_method.Current_path, true, findAll);
             }   
         }
 

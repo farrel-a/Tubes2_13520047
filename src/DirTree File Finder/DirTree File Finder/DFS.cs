@@ -24,7 +24,7 @@ namespace DirTree_File_Finder
         }
 
         //Methods
-        public void findFileDFS(string current_path, bool findAllOccurrences)
+        public void findFileDFS(string current_path, bool findAllOccurrences, bool findAll)
         {
             this.findAllOccurrences = findAllOccurrences;
             List<string> contents = findContents(current_path);  //all content (files and dirs) in a form of abs. path
@@ -45,13 +45,18 @@ namespace DirTree_File_Finder
                     //Search directory first, findContents already sorted by dir first then file
                     if (Directory.Exists(c) && (c != "." || c != ".."))
                     {
-                        this.findFileDFS(c, this.findAllOccurrences);    //if path c is a directory, go to inside c
+                        this.findFileDFS(c, this.findAllOccurrences, findAll);    //if path c is a directory, go to inside c
                         continue;
                     } // c.ToLower().Contains(this.filename.ToLower())
                     else if ((Path.GetFileName(c)).Equals(this.filename))
                     {
                         this.FileLocation(c); //path c is a file found
                         this.fileIsFound = true;
+
+                        if (findAll == false)
+                        {
+                            this.findAllOccurrences = false;
+                        }
                     }
                 }
             }
