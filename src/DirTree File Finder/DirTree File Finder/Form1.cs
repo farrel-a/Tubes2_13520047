@@ -53,6 +53,7 @@ namespace DirTree_File_Finder
             {
                 MessageBox.Show("File not found");
             }
+            this.LabelTimeSpent.Text = this.DFSTime.ToString();
         }
 
         private void Background_Worker(object sender,DoWorkEventArgs args)
