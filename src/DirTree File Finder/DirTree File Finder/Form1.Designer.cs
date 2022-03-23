@@ -49,35 +49,37 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.TreeViewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.LabelOutput = new System.Windows.Forms.Label();
             this.PanelOutput = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.LabelTimeSpent = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.TreeViewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelInput.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.PanelOutput.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.PanelOutput.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -291,108 +293,6 @@
             this.panel1.Size = new System.Drawing.Size(406, 521);
             this.panel1.TabIndex = 3;
             // 
-            // LabelOutput
-            // 
-            this.LabelOutput.AutoSize = true;
-            this.LabelOutput.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelOutput.Location = new System.Drawing.Point(116, 17);
-            this.LabelOutput.Name = "LabelOutput";
-            this.LabelOutput.Size = new System.Drawing.Size(89, 29);
-            this.LabelOutput.TabIndex = 0;
-            this.LabelOutput.Text = "Output";
-            // 
-            // PanelOutput
-            // 
-            this.PanelOutput.BackColor = System.Drawing.Color.Pink;
-            this.PanelOutput.Controls.Add(this.listBox1);
-            this.PanelOutput.Controls.Add(this.panel5);
-            this.PanelOutput.Controls.Add(this.panel4);
-            this.PanelOutput.Controls.Add(this.panel2);
-            this.PanelOutput.Controls.Add(this.panel3);
-            this.PanelOutput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelOutput.Location = new System.Drawing.Point(694, 85);
-            this.PanelOutput.Name = "PanelOutput";
-            this.PanelOutput.Size = new System.Drawing.Size(332, 521);
-            this.PanelOutput.TabIndex = 2;
-            // 
-            // listBox1
-            // 
-            this.listBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(18, 64);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(296, 393);
-            this.listBox1.TabIndex = 5;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // LabelTimeSpent
-            // 
-            this.LabelTimeSpent.AutoSize = true;
-            this.LabelTimeSpent.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimeSpent.Location = new System.Drawing.Point(105, 21);
-            this.LabelTimeSpent.Name = "LabelTimeSpent";
-            this.LabelTimeSpent.Size = new System.Drawing.Size(18, 19);
-            this.LabelTimeSpent.TabIndex = 4;
-            this.LabelTimeSpent.Text = "0";
-            this.LabelTimeSpent.Click += new System.EventHandler(this.LabelTimeSpent_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.LabelOutput);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(332, 64);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.LabelTimeSpent);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 457);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(332, 64);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 64);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(18, 393);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(314, 64);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(18, 393);
-            this.panel5.TabIndex = 3;
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(20, 521);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(388, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(18, 521);
-            this.panel7.TabIndex = 1;
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Pink;
@@ -405,47 +305,9 @@
             this.panel8.Size = new System.Drawing.Size(368, 521);
             this.panel8.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 19);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Time spent:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label2);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(368, 64);
-            this.panel9.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(157, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 29);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tree";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 457);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(368, 64);
-            this.panel10.TabIndex = 1;
-            // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.pictureBox1);
             this.panel11.Controls.Add(this.TreeViewer);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 64);
@@ -496,6 +358,15 @@
             this.TreeViewer.ZoomWindowThreshold = 0.05D;
             this.TreeViewer.Load += new System.EventHandler(this.gViewer1_Load_1);
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label3);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(0, 457);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(368, 64);
+            this.panel10.TabIndex = 1;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -505,6 +376,148 @@
             this.label3.Size = new System.Drawing.Size(114, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "©️ 2022, MTMA";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(368, 64);
+            this.panel9.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(157, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tree";
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(388, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(18, 521);
+            this.panel7.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(20, 521);
+            this.panel6.TabIndex = 0;
+            // 
+            // LabelOutput
+            // 
+            this.LabelOutput.AutoSize = true;
+            this.LabelOutput.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelOutput.Location = new System.Drawing.Point(116, 17);
+            this.LabelOutput.Name = "LabelOutput";
+            this.LabelOutput.Size = new System.Drawing.Size(89, 29);
+            this.LabelOutput.TabIndex = 0;
+            this.LabelOutput.Text = "Output";
+            // 
+            // PanelOutput
+            // 
+            this.PanelOutput.BackColor = System.Drawing.Color.Pink;
+            this.PanelOutput.Controls.Add(this.listBox1);
+            this.PanelOutput.Controls.Add(this.panel5);
+            this.PanelOutput.Controls.Add(this.panel4);
+            this.PanelOutput.Controls.Add(this.panel2);
+            this.PanelOutput.Controls.Add(this.panel3);
+            this.PanelOutput.Dock = System.Windows.Forms.DockStyle.Right;
+            this.PanelOutput.Location = new System.Drawing.Point(694, 85);
+            this.PanelOutput.Name = "PanelOutput";
+            this.PanelOutput.Size = new System.Drawing.Size(332, 521);
+            this.PanelOutput.TabIndex = 2;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(18, 64);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.ScrollAlwaysVisible = true;
+            this.listBox1.Size = new System.Drawing.Size(296, 393);
+            this.listBox1.TabIndex = 5;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(314, 64);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(18, 393);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 64);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(18, 393);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.LabelTimeSpent);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 457);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(332, 64);
+            this.panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 19);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Time spent:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // LabelTimeSpent
+            // 
+            this.LabelTimeSpent.AutoSize = true;
+            this.LabelTimeSpent.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTimeSpent.Location = new System.Drawing.Point(105, 21);
+            this.LabelTimeSpent.Name = "LabelTimeSpent";
+            this.LabelTimeSpent.Size = new System.Drawing.Size(18, 19);
+            this.LabelTimeSpent.TabIndex = 4;
+            this.LabelTimeSpent.Text = "0";
+            this.LabelTimeSpent.Click += new System.EventHandler(this.LabelTimeSpent_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.LabelOutput);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(332, 64);
+            this.panel3.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(332, 393);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -528,17 +541,18 @@
             this.PanelInput.ResumeLayout(false);
             this.PanelInput.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.PanelOutput.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panel11.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.PanelOutput.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -583,6 +597,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -51,10 +51,12 @@ namespace DirTree_File_Finder
         {
             if (listBox1.Items.Count > 0)
             {
+                pictureBox1.Visible = false;
                 MessageBox.Show("Done");
             }
             else
             {
+                pictureBox1.Visible = true;
                 MessageBox.Show("File not found");
             }
 
