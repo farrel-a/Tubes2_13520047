@@ -22,52 +22,44 @@ namespace DirTree_File_Finder
         private Microsoft.Msagl.Drawing.Graph graph;   // graph object
         private List<string> edge;             // edge list
         private List<string> foundFilePath;
+        private Queue<string> uncheckedPath;
 
         //CTOR
-        public Tree(List<string> search_log, List<string> foundFilePath)
+        public Tree(List<string> search_log, List<string> foundFilePath, Queue<string> uncheckedPath)
         {
             this.search_log = search_log;
             this.graph = new Microsoft.Msagl.Drawing.Graph("Search Tree");
             this.edge = new List<string>();
             this.foundFilePath = foundFilePath;
+            this.uncheckedPath = uncheckedPath;
         }
 
         // Methods
         public void generateTree()
         {
-            foreach(string p in this.search_log)
+            // colorise unchecked as black
+            foreach (string p in uncheckedPath)
             {
                 string[] subs = p.Split('\\');
-                if (this.foundFilePath.Contains(p)) //colorise found path
+                for (int i = 0; i < subs.Length - 1; i++)
                 {
-                    for (int i = 0; i < subs.Length - 1; i++)
+                    string edgeName = subs[i] + subs[i + 1];
+                    if (!this.edge.Contains(edgeName))
                     {
-                        string edgeName = subs[i] + subs[i + 1];
-                        if (!this.edge.Contains(edgeName))
-                        {
-                            Edge e = graph.AddEdge(subs[i], subs[i + 1]);
-                            e.SourceNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
-                            e.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
-                            e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
-                            this.edge.Add(edgeName);
-                        }
-                        else
-                        {
-                            foreach (Edge e in graph.Edges)
-                            {
-                                if (e.Source.Equals(subs[i]) && e.Target.Equals(subs[i + 1]))
-                                {
-                                    e.SourceNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
-                                    e.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
-                                    e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
-                                }
-                            }
-                        }
+                        Edge e = graph.AddEdge(subs[i], subs[i + 1]);
+                        e.SourceNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                        e.Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                        e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                        this.edge.Add(edgeName);
                     }
-
                 }
+            }
 
-                else
+            // colorise checked as red
+            foreach (string p in this.search_log)
+            {
+                string[] subs = p.Split('\\');
+                if (!this.foundFilePath.Contains(p))
                 {
                     for (int i = 0; i < subs.Length - 1; i++)
                     {
@@ -77,8 +69,38 @@ namespace DirTree_File_Finder
                             Edge e = graph.AddEdge(subs[i], subs[i + 1]);
                             e.SourceNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
                             e.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                            e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Red; 
+                            e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
                             this.edge.Add(edgeName);
+                        }
+                    }
+                }
+            }
+
+            // colorise found as blue
+            foreach (string p in this.foundFilePath)
+            {
+                string[] subs = p.Split('\\');
+                for (int i = 0; i < subs.Length - 1; i++)
+                {
+                    string edgeName = subs[i] + subs[i + 1];
+                    if (!this.edge.Contains(edgeName))
+                    {
+                        Edge e = graph.AddEdge(subs[i], subs[i + 1]);
+                        e.SourceNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                        e.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                        e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                        this.edge.Add(edgeName);
+                    }
+                    else
+                    {
+                        foreach (Edge e in graph.Edges)
+                        {
+                            if (e.Source.Equals(subs[i]) && e.Target.Equals(subs[i + 1]))
+                            {
+                                e.SourceNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                                e.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                                e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                            }
                         }
                     }
                 }
@@ -103,11 +125,11 @@ namespace DirTree_File_Finder
             form.ResumeLayout();
 
             //show the form 
-            //form.ShowDialog();
+            form.ShowDialog();
         }
 
         // Getter & Setter
-        public Microsoft.Msagl.Drawing.Graph Graph 
+        public Microsoft.Msagl.Drawing.Graph Graph
         {
             set { this.graph = value; }
             get { return this.graph; }

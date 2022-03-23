@@ -83,13 +83,19 @@ namespace DirTree_File_Finder
                 //elapsed time
                 this.BFSTime = stopwatch.Elapsed.TotalSeconds;
 
-                //this.BFSTree = new Tree(bfs_method.Search_log, bfs_method.FoundFilePath);
-                //this.BFSTree.generateTree();
-                //this.BFSTree.displayTree();
+                this.BFSTree = new Tree(bfs_method.Search_log, bfs_method.FoundFilePath, bfs_method.FilePaths);
+                this.BFSTree.generateTree();
+                TreeViewer.BeginInvoke((Action)delegate ()
+                {
+                    var g = this.BFSTree.Graph;
+                    this.TreeViewer.Graph = g;
+                });
 
+                //Clear buffer, for next search input
                 this.bfs_method.Search_log = new List<string>();
                 this.bfs_method.FoundFilePath = new List<string>();
                 this.bfs_method.FileIsFound = false;
+                this.bfs_method.FilePaths = new Queue<string>();
             }
 
             if (RadioButtonDFS.Checked)
@@ -106,9 +112,8 @@ namespace DirTree_File_Finder
                 this.DFSTime = stopwatch.Elapsed.TotalSeconds; //in seconds
 
                 //Create Tree
-                this.DFSTree = new Tree(dfs_method.Search_log, dfs_method.FoundFilePath);
+                this.DFSTree = new Tree(dfs_method.Search_log, dfs_method.FoundFilePath, dfs_method.FilePaths);
                 this.DFSTree.generateTree();
-                //this.DFSTree.displayTree();
 
                 TreeViewer.BeginInvoke((Action)delegate ()
                 {
@@ -120,6 +125,7 @@ namespace DirTree_File_Finder
                 this.dfs_method.Search_log = new List<string>();
                 this.dfs_method.FoundFilePath = new List<string>();
                 this.dfs_method.FileIsFound = false;
+                this.dfs_method.FilePaths = new Queue<string>();
 
 
             }   

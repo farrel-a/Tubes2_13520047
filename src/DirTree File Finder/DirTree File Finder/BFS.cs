@@ -13,28 +13,29 @@ namespace DirTree_File_Finder
         //Attributes
         public event FilePathFound FileLocation;
         private bool findAllOccurrences;
-        private Queue<string> filepaths;
+        private Queue<string> filePaths;
         private bool fileIsFound;
 
         //CTOR
-        public BFS(string filename, string current_path) : base(filename, current_path) {
+        public BFS(string filename, string current_path) : base(filename, current_path)
+        {
             this.findAllOccurrences = false;
-            this.filepaths = new Queue<string>();
+            this.filePaths = new Queue<string>();
             this.fileIsFound = false;
         }
 
         //Methods
         public void findFileBFS(string current_path, bool findAllOccurrences)
         {
-            
+
             this.findAllOccurrences = findAllOccurrences;
-            filepaths.Enqueue(current_path);
+            filePaths.Enqueue(current_path);
 
             if (!this.findAllOccurrences)
             {
                 while (!this.fileIsFound)
                 {
-                    string path = filepaths.Dequeue();
+                    string path = filePaths.Dequeue();
                     this.search_log.Add(path);
                     List<string> contents = findContents(path);
                     //by default sorted by dir, (heuristic) -> because bfs, reverse to sort by file first
@@ -44,8 +45,9 @@ namespace DirTree_File_Finder
                         if (Path.GetFileName(c).Equals(this.filename) && !this.fileIsFound)
                         {
                             this.search_log.Add(c);
+                            this.foundFilePath.Add(c);
                             this.FileLocation(c);
-                            this.fileIsFound = true;  
+                            this.fileIsFound = true;
                         }
                         else if (!Path.GetFileName(c).Equals(this.filename) && !Directory.Exists(c) && !this.fileIsFound)
                         {
@@ -53,11 +55,11 @@ namespace DirTree_File_Finder
                         }
                         else if (Directory.Exists(c))
                         {
-                            filepaths.Enqueue(c);
+                            filePaths.Enqueue(c);
                         }
                         else if (this.fileIsFound)
                         {
-                            filepaths.Enqueue(c);
+                            filePaths.Enqueue(c);
                         }
                     }
 
@@ -66,9 +68,9 @@ namespace DirTree_File_Finder
 
             else
             {
-                while (filepaths.Count>0)
+                while (filePaths.Count > 0)
                 {
-                    string path = filepaths.Dequeue();
+                    string path = filePaths.Dequeue();
                     this.search_log.Add(path);
                     List<string> contents = findContents(path);
                     //by default sorted by dir, (heuristic) -> because bfs, reverse to sort by file first
@@ -78,6 +80,7 @@ namespace DirTree_File_Finder
                         if (Path.GetFileName(c).Equals(this.filename) && !this.fileIsFound)
                         {
                             this.search_log.Add(c);
+                            this.foundFilePath.Add(c);
                             this.FileLocation(c);
                         }
                         else if (!Path.GetFileName(c).Equals(this.filename) && !Directory.Exists(c))
@@ -86,11 +89,11 @@ namespace DirTree_File_Finder
                         }
                         else if (Directory.Exists(c))
                         {
-                            filepaths.Enqueue(c);
+                            filePaths.Enqueue(c);
                         }
                         else if (this.fileIsFound)
                         {
-                            filepaths.Enqueue(c);
+                            filePaths.Enqueue(c);
                         }
                     }
 
@@ -103,6 +106,11 @@ namespace DirTree_File_Finder
         {
             set { this.fileIsFound = value; }
             get { return this.fileIsFound; }
+        }
+        public Queue<string> FilePaths
+        {
+            set { this.filePaths = value; }
+            get { return this.filePaths; }
         }
     }
 }

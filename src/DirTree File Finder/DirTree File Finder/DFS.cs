@@ -14,7 +14,8 @@ namespace DirTree_File_Finder
         public event FilePathFound FileLocation;
         private bool findAllOccurrences;
         private bool fileIsFound;
-        
+        private Queue<string> filePaths;
+
 
         //CTOR
         public DFS(string filename, string current_path) : base(filename, current_path)
@@ -22,6 +23,7 @@ namespace DirTree_File_Finder
             //default
             this.findAllOccurrences = false;
             this.fileIsFound = false;
+            this.filePaths = new Queue<string>();
         }
 
         //Methods
@@ -33,7 +35,7 @@ namespace DirTree_File_Finder
             {
                 if (this.fileIsFound && !this.findAllOccurrences)
                 {
-                    break;
+                    this.filePaths.Enqueue(c);
                 }
                 else
                 {
@@ -45,7 +47,7 @@ namespace DirTree_File_Finder
                     {
                         this.findFileDFS(c, this.findAllOccurrences, findAll);    //if path c is a directory, go to inside c
                         continue;
-                    } // c.ToLower().Contains(this.filename.ToLower())
+                    }
                     else if ((Path.GetFileName(c)).Equals(this.filename))
                     {
                         this.FileLocation(c); //path c is a file found
@@ -68,6 +70,12 @@ namespace DirTree_File_Finder
         {
             set { this.fileIsFound = value; }
             get { return this.fileIsFound; }
+        }
+
+        public Queue<string> FilePaths
+        {
+            set { this.filePaths = value; }
+            get { return this.filePaths; }
         }
     }
 }
