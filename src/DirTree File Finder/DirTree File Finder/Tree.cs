@@ -72,6 +72,18 @@ namespace DirTree_File_Finder
                             e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
                             this.edge.Add(edgeName);
                         }
+                        else
+                        {
+                            foreach (Edge e in graph.Edges)
+                            {
+                                if (e.Source.Equals(subs[i]) && e.Target.Equals(subs[i + 1]))
+                                {
+                                    e.SourceNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                                    e.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                                    e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                                }
+                            }
+                        }
                     }
                 }
             }

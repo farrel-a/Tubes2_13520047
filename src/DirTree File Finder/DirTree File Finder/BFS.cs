@@ -77,7 +77,7 @@ namespace DirTree_File_Finder
                     contents.Reverse();
                     foreach (string c in contents)
                     {
-                        if (Path.GetFileName(c).Equals(this.filename) && !this.fileIsFound)
+                        if (Path.GetFileName(c).Equals(this.filename))
                         {
                             this.search_log.Add(c);
                             this.foundFilePath.Add(c);

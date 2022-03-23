@@ -57,7 +57,15 @@ namespace DirTree_File_Finder
             {
                 MessageBox.Show("File not found");
             }
-            this.LabelTimeSpent.Text = this.DFSTime.ToString() + " s";
+
+            if (RadioButtonBFS.Checked)
+            {
+                this.LabelTimeSpent.Text = this.BFSTime.ToString() + " s";
+            }
+            else if (RadioButtonDFS.Checked)
+            {
+                this.LabelTimeSpent.Text = this.DFSTime.ToString() + " s";
+            }
         }
 
         private void Background_Worker(object sender,DoWorkEventArgs args)
