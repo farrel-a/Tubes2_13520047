@@ -66,6 +66,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.TreeViewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            this.label3 = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelInput.SuspendLayout();
@@ -75,6 +76,7 @@
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -333,7 +335,7 @@
             // 
             this.LabelTimeSpent.AutoSize = true;
             this.LabelTimeSpent.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimeSpent.Location = new System.Drawing.Point(105, 18);
+            this.LabelTimeSpent.Location = new System.Drawing.Point(105, 21);
             this.LabelTimeSpent.Name = "LabelTimeSpent";
             this.LabelTimeSpent.Size = new System.Drawing.Size(18, 19);
             this.LabelTimeSpent.TabIndex = 4;
@@ -407,7 +409,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 18);
+            this.label1.Location = new System.Drawing.Point(14, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 19);
             this.label1.TabIndex = 5;
@@ -435,6 +437,7 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.label3);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel10.Location = new System.Drawing.Point(0, 457);
             this.panel10.Name = "panel10";
@@ -493,6 +496,16 @@
             this.TreeViewer.ZoomWindowThreshold = 0.05D;
             this.TreeViewer.Load += new System.EventHandler(this.gViewer1_Load_1);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(122, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "©️ 2022, MTMA";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -523,6 +536,8 @@
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -567,6 +582,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
