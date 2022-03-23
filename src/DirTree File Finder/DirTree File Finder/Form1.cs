@@ -23,7 +23,7 @@ namespace DirTree_File_Finder
         private BFS bfs_method;
 
         private Tree DFSTree;
-        // Add BFSTree here (follow like DFS)
+        private Tree BFSTree;
 
         public MainForm()
         {
@@ -32,8 +32,6 @@ namespace DirTree_File_Finder
             this.dfs_method = new DFS(null, null);
             this.dfs_method.FileLocation += FileFound;
 
-
-            // Add BFS here (follow like DFS)
             this.bfs_method = new BFS(null, null);
             this.bfs_method.FileLocation += FileFound;
 
@@ -75,14 +73,22 @@ namespace DirTree_File_Finder
 
             if (RadioButtonBFS.Checked)
             {
-                //add BFS here
+                // create stopwatch
                 Stopwatch stopwatch = new Stopwatch();
+                //start stopwatch
                 stopwatch.Start();
                 bfs_method.findFileBFS(bfs_method.Current_path, true);
+                //stop stopwatch
                 stopwatch.Stop();
+                //elapsed time
                 this.BFSTime = stopwatch.Elapsed.TotalSeconds;
 
-                //Add BFSTree here (follow like DFS)
+                this.BFSTree = new Tree(bfs_method.Search_log, bfs_method.Filename,bfs_method.FoundFilePath);
+                this.BFSTree.generateTree();
+                this.BFSTree.displayTree();
+
+                this.bfs_method.Search_log = new List<string>();
+                this.bfs_method.FoundFilePath = new List<string>();
             }
 
             if (RadioButtonDFS.Checked)

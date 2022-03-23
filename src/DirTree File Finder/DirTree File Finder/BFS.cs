@@ -16,17 +16,15 @@ namespace DirTree_File_Finder
 
         //CTOR
         public BFS(string filename, string current_path) : base(filename, current_path) {
-            this.findAllOccurrences = true;
+            this.findAllOccurrences = false;
         }
 
         //Methods
         public void findFileBFS(string current_path, bool findAllOccurrences)
         {
-            //Add BFS Algorithm here
             Queue <string> files = new Queue <string>();
             this.findAllOccurrences = findAllOccurrences;
             files.Enqueue(current_path);
-            Console.WriteLine(current_path);
 
             while (files.Count > 0)
             {
@@ -36,11 +34,15 @@ namespace DirTree_File_Finder
                 {
                     foreach(string file in listFile)
                     {
-                        if (file != current_path)
+                        this.search_log.Add(file);
+                        if (Directory.Exists(file) && (file != "." || file != ".."))
                         {
-                            Console.WriteLine(file);
                             files.Enqueue(file);
                             findAllOccurrences = true;
+                        }
+                        else if ((Path.GetFileName(file)).Equals(this.filename))
+                        {
+                            this.FileLocation(file);
                         }
                     }
                 }
