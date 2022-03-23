@@ -108,7 +108,13 @@ namespace DirTree_File_Finder
                 //Create Tree
                 this.DFSTree = new Tree(dfs_method.Search_log, dfs_method.FoundFilePath);
                 this.DFSTree.generateTree();
-                this.DFSTree.displayTree();
+                //this.DFSTree.displayTree();
+
+                TreeViewer.BeginInvoke((Action)delegate ()
+                {
+                    var g = this.DFSTree.Graph;
+                    this.TreeViewer.Graph = g;
+                });
 
                 //Clear buffer, for next search input
                 this.dfs_method.Search_log = new List<string>();
@@ -167,6 +173,11 @@ namespace DirTree_File_Finder
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gViewer1_Load_1(object sender, EventArgs e)
         {
 
         }

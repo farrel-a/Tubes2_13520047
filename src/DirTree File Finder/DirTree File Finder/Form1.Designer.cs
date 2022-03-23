@@ -61,6 +61,11 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.TreeViewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelInput.SuspendLayout();
@@ -68,6 +73,9 @@
             this.PanelOutput.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -317,7 +325,7 @@
             this.listBox1.Location = new System.Drawing.Point(18, 64);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(291, 393);
+            this.listBox1.Size = new System.Drawing.Size(296, 393);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -362,9 +370,9 @@
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(309, 64);
+            this.panel5.Location = new System.Drawing.Point(314, 64);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(23, 393);
+            this.panel5.Size = new System.Drawing.Size(18, 393);
             this.panel5.TabIndex = 3;
             // 
             // panel6
@@ -386,6 +394,9 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Pink;
+            this.panel8.Controls.Add(this.panel11);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Controls.Add(this.panel9);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(20, 0);
             this.panel8.Name = "panel8";
@@ -402,6 +413,85 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Time spent:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(368, 64);
+            this.panel9.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(157, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tree";
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(0, 457);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(368, 64);
+            this.panel10.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.TreeViewer);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(0, 64);
+            this.panel11.Name = "panel11";
+            this.panel11.Padding = new System.Windows.Forms.Padding(18, 0, 18, 0);
+            this.panel11.Size = new System.Drawing.Size(368, 393);
+            this.panel11.TabIndex = 2;
+            // 
+            // TreeViewer
+            // 
+            this.TreeViewer.ArrowheadLength = 10D;
+            this.TreeViewer.AsyncLayout = false;
+            this.TreeViewer.AutoScroll = true;
+            this.TreeViewer.BackColor = System.Drawing.Color.LavenderBlush;
+            this.TreeViewer.BackwardEnabled = false;
+            this.TreeViewer.BuildHitTree = true;
+            this.TreeViewer.CurrentLayoutMethod = Microsoft.Msagl.GraphViewerGdi.LayoutMethod.UseSettingsOfTheGraph;
+            this.TreeViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TreeViewer.EdgeInsertButtonVisible = false;
+            this.TreeViewer.FileName = "";
+            this.TreeViewer.ForwardEnabled = false;
+            this.TreeViewer.Graph = null;
+            this.TreeViewer.InsertingEdge = false;
+            this.TreeViewer.LayoutAlgorithmSettingsButtonVisible = false;
+            this.TreeViewer.LayoutEditingEnabled = true;
+            this.TreeViewer.Location = new System.Drawing.Point(18, 0);
+            this.TreeViewer.LooseOffsetForRouting = 0.25D;
+            this.TreeViewer.MouseHitDistance = 0.05D;
+            this.TreeViewer.Name = "TreeViewer";
+            this.TreeViewer.NavigationVisible = true;
+            this.TreeViewer.NeedToCalculateLayout = true;
+            this.TreeViewer.OffsetForRelaxingInRouting = 0.6D;
+            this.TreeViewer.PaddingForEdgeRouting = 8D;
+            this.TreeViewer.PanButtonPressed = false;
+            this.TreeViewer.SaveAsImageEnabled = true;
+            this.TreeViewer.SaveAsMsaglEnabled = true;
+            this.TreeViewer.SaveButtonVisible = true;
+            this.TreeViewer.SaveGraphButtonVisible = true;
+            this.TreeViewer.SaveInVectorFormatEnabled = true;
+            this.TreeViewer.Size = new System.Drawing.Size(332, 393);
+            this.TreeViewer.TabIndex = 0;
+            this.TreeViewer.TightOffsetForRouting = 0.125D;
+            this.TreeViewer.ToolBarIsVisible = true;
+            this.TreeViewer.Transform = ((Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation)(resources.GetObject("TreeViewer.Transform")));
+            this.TreeViewer.UndoRedoButtonsVisible = false;
+            this.TreeViewer.WindowZoomButtonPressed = false;
+            this.TreeViewer.ZoomF = 1D;
+            this.TreeViewer.ZoomWindowThreshold = 0.05D;
+            this.TreeViewer.Load += new System.EventHandler(this.gViewer1_Load_1);
             // 
             // MainForm
             // 
@@ -430,6 +520,10 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -468,6 +562,11 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel11;
+        private Microsoft.Msagl.GraphViewerGdi.GViewer TreeViewer;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label2;
     }
 }
 

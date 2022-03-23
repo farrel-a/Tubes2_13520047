@@ -103,7 +103,7 @@ namespace DirTree_File_Finder
             form.ResumeLayout();
 
             //show the form 
-            form.ShowDialog();
+            //form.ShowDialog();
         }
 
         // Getter & Setter
