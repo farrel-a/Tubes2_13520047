@@ -62,5 +62,12 @@ namespace DirTree_File_Finder
                 }
             }
         }
+
+        // Getter & Setter
+        public bool FileIsFound
+        {
+            set { this.fileIsFound = value; }
+            get { return this.fileIsFound; }
+        }
     }
 }

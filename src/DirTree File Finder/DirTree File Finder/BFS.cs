@@ -13,40 +13,96 @@ namespace DirTree_File_Finder
         //Attributes
         public event FilePathFound FileLocation;
         private bool findAllOccurrences;
+        private Queue<string> filepaths;
+        private bool fileIsFound;
 
         //CTOR
         public BFS(string filename, string current_path) : base(filename, current_path) {
             this.findAllOccurrences = false;
+            this.filepaths = new Queue<string>();
+            this.fileIsFound = false;
         }
 
         //Methods
         public void findFileBFS(string current_path, bool findAllOccurrences)
         {
-            Queue <string> files = new Queue <string>();
+            
             this.findAllOccurrences = findAllOccurrences;
-            files.Enqueue(current_path);
+            filepaths.Enqueue(current_path);
 
-            while (files.Count > 0)
+            if (!this.findAllOccurrences)
             {
-                string path = files.Dequeue();
-                string [] listFile = path.Split('/');
-                if (listFile != null)
+                while (!this.fileIsFound)
                 {
-                    foreach(string file in listFile)
+                    string path = filepaths.Dequeue();
+                    this.search_log.Add(path);
+                    List<string> contents = findContents(path);
+                    //by default sorted by dir, (heuristic) -> because bfs, reverse to sort by file first
+                    contents.Reverse();
+                    foreach (string c in contents)
                     {
-                        this.search_log.Add(file);
-                        if (Directory.Exists(file) && (file != "." || file != ".."))
+                        if (Path.GetFileName(c).Equals(this.filename) && !this.fileIsFound)
                         {
-                            files.Enqueue(file);
-                            findAllOccurrences = true;
+                            this.search_log.Add(c);
+                            this.FileLocation(c);
+                            this.fileIsFound = true;  
                         }
-                        else if ((Path.GetFileName(file)).Equals(this.filename))
+                        else if (!Path.GetFileName(c).Equals(this.filename) && !Directory.Exists(c) && !this.fileIsFound)
                         {
-                            this.FileLocation(file);
+                            this.search_log.Add(c);
+                        }
+                        else if (Directory.Exists(c))
+                        {
+                            filepaths.Enqueue(c);
+                        }
+                        else if (this.fileIsFound)
+                        {
+                            filepaths.Enqueue(c);
                         }
                     }
+
                 }
             }
+
+            else
+            {
+                while (filepaths.Count>0)
+                {
+                    string path = filepaths.Dequeue();
+                    this.search_log.Add(path);
+                    List<string> contents = findContents(path);
+                    //by default sorted by dir, (heuristic) -> because bfs, reverse to sort by file first
+                    contents.Reverse();
+                    foreach (string c in contents)
+                    {
+                        if (Path.GetFileName(c).Equals(this.filename) && !this.fileIsFound)
+                        {
+                            this.search_log.Add(c);
+                            this.FileLocation(c);
+                        }
+                        else if (!Path.GetFileName(c).Equals(this.filename) && !Directory.Exists(c))
+                        {
+                            this.search_log.Add(c);
+                        }
+                        else if (Directory.Exists(c))
+                        {
+                            filepaths.Enqueue(c);
+                        }
+                        else if (this.fileIsFound)
+                        {
+                            filepaths.Enqueue(c);
+                        }
+                    }
+
+                }
+            }
+        }
+
+        // Getter & Setter
+        public bool FileIsFound
+        {
+            set { this.fileIsFound = value; }
+            get { return this.fileIsFound; }
         }
     }
 }
