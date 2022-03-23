@@ -200,7 +200,7 @@
             this.CheckBoxFindAllOccurence.AutoSize = true;
             this.CheckBoxFindAllOccurence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CheckBoxFindAllOccurence.Font = new System.Drawing.Font("Leelawadee", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxFindAllOccurence.Location = new System.Drawing.Point(12, 315);
+            this.CheckBoxFindAllOccurence.Location = new System.Drawing.Point(12, 302);
             this.CheckBoxFindAllOccurence.Name = "CheckBoxFindAllOccurence";
             this.CheckBoxFindAllOccurence.Size = new System.Drawing.Size(144, 21);
             this.CheckBoxFindAllOccurence.TabIndex = 1;
@@ -211,7 +211,7 @@
             // 
             this.ExampleLabel.AutoSize = true;
             this.ExampleLabel.Font = new System.Drawing.Font("Leelawadee", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExampleLabel.Location = new System.Drawing.Point(13, 277);
+            this.ExampleLabel.Location = new System.Drawing.Point(13, 270);
             this.ExampleLabel.Name = "ExampleLabel";
             this.ExampleLabel.Size = new System.Drawing.Size(164, 14);
             this.ExampleLabel.TabIndex = 4;
@@ -220,7 +220,7 @@
             // TextBoxInputFileName
             // 
             this.TextBoxInputFileName.Font = new System.Drawing.Font("Leelawadee", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxInputFileName.Location = new System.Drawing.Point(12, 236);
+            this.TextBoxInputFileName.Location = new System.Drawing.Point(12, 230);
             this.TextBoxInputFileName.Name = "TextBoxInputFileName";
             this.TextBoxInputFileName.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.TextBoxInputFileName.Size = new System.Drawing.Size(253, 24);
@@ -230,7 +230,7 @@
             // 
             this.LabelInputFileName.AutoSize = true;
             this.LabelInputFileName.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelInputFileName.Location = new System.Drawing.Point(12, 201);
+            this.LabelInputFileName.Location = new System.Drawing.Point(12, 197);
             this.LabelInputFileName.Name = "LabelInputFileName";
             this.LabelInputFileName.Size = new System.Drawing.Size(113, 19);
             this.LabelInputFileName.TabIndex = 1;
@@ -493,7 +493,7 @@
             // 
             this.LabelTimeSpent.AutoSize = true;
             this.LabelTimeSpent.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimeSpent.Location = new System.Drawing.Point(105, 21);
+            this.LabelTimeSpent.Location = new System.Drawing.Point(104, 21);
             this.LabelTimeSpent.Name = "LabelTimeSpent";
             this.LabelTimeSpent.Size = new System.Drawing.Size(18, 19);
             this.LabelTimeSpent.TabIndex = 4;
