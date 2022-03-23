@@ -77,18 +77,19 @@ namespace DirTree_File_Finder
                 Stopwatch stopwatch = new Stopwatch();
                 //start stopwatch
                 stopwatch.Start();
-                bfs_method.findFileBFS(bfs_method.Current_path, true);
+                bfs_method.findFileBFS(bfs_method.Current_path, findAll);
                 //stop stopwatch
                 stopwatch.Stop();
                 //elapsed time
                 this.BFSTime = stopwatch.Elapsed.TotalSeconds;
 
-                this.BFSTree = new Tree(bfs_method.Search_log, bfs_method.FoundFilePath);
-                this.BFSTree.generateTree();
-                this.BFSTree.displayTree();
+                //this.BFSTree = new Tree(bfs_method.Search_log, bfs_method.FoundFilePath);
+                //this.BFSTree.generateTree();
+                //this.BFSTree.displayTree();
 
                 this.bfs_method.Search_log = new List<string>();
                 this.bfs_method.FoundFilePath = new List<string>();
+                this.bfs_method.FileIsFound = false;
             }
 
             if (RadioButtonDFS.Checked)
@@ -112,6 +113,7 @@ namespace DirTree_File_Finder
                 //Clear buffer, for next search input
                 this.dfs_method.Search_log = new List<string>();
                 this.dfs_method.FoundFilePath = new List<string>();
+                this.dfs_method.FileIsFound = false;
 
 
             }   
@@ -148,6 +150,9 @@ namespace DirTree_File_Finder
             listBox1.Items.Clear();
             this.dfs_method.Filename = TextBoxInputFileName.Text;
             this.dfs_method.Current_path = LabelDirectory.Text;
+
+            this.bfs_method.Filename = TextBoxInputFileName.Text;
+            this.bfs_method.Current_path = LabelDirectory.Text;
             backgroundWorker1.RunWorkerAsync();
         }
 
