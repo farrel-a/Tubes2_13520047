@@ -21,16 +21,14 @@ namespace DirTree_File_Finder
         private List<string> search_log;       // path search log
         private Microsoft.Msagl.Drawing.Graph graph;   // graph object
         private List<string> edge;             // edge list
-        private string filename;
         private List<string> foundFilePath;
 
         //CTOR
-        public Tree(List<string> search_log, string filename, List<string> foundFilePath)
+        public Tree(List<string> search_log, List<string> foundFilePath)
         {
             this.search_log = search_log;
             this.graph = new Microsoft.Msagl.Drawing.Graph("Search Tree");
             this.edge = new List<string>();
-            this.filename = filename;
             this.foundFilePath = foundFilePath;
         }
 

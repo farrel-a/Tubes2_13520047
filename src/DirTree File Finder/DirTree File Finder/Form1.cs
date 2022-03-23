@@ -83,7 +83,7 @@ namespace DirTree_File_Finder
                 //elapsed time
                 this.BFSTime = stopwatch.Elapsed.TotalSeconds;
 
-                this.BFSTree = new Tree(bfs_method.Search_log, bfs_method.Filename,bfs_method.FoundFilePath);
+                this.BFSTree = new Tree(bfs_method.Search_log, bfs_method.FoundFilePath);
                 this.BFSTree.generateTree();
                 this.BFSTree.displayTree();
 
@@ -105,7 +105,7 @@ namespace DirTree_File_Finder
                 this.DFSTime = stopwatch.Elapsed.TotalSeconds; //in seconds
 
                 //Create Tree
-                this.DFSTree = new Tree(dfs_method.Search_log, dfs_method.Filename, dfs_method.FoundFilePath);
+                this.DFSTree = new Tree(dfs_method.Search_log, dfs_method.FoundFilePath);
                 this.DFSTree.generateTree();
                 this.DFSTree.displayTree();
 
