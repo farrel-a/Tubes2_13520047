@@ -40,9 +40,6 @@ namespace DirTree_File_Finder
                     //Add to search_log
                     this.search_log.Add(c);
 
-                    //To Debug
-                    //Debug.WriteLine(c);
-
                     //Search directory first, findContents already sorted by dir first then file
                     if (Directory.Exists(c) && (c != "." || c != ".."))
                     {

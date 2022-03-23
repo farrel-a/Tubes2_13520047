@@ -97,8 +97,6 @@ namespace DirTree_File_Finder
                 stopwatch.Stop();
                 // Elapsed time
                 this.DFSTime = stopwatch.Elapsed.TotalSeconds; //in seconds
-                // To see in console
-                //Debug.WriteLine(this.DFSTime);
 
                 //Create Tree
                 this.DFSTree = new Tree(dfs_method.Search_log, dfs_method.Filename, dfs_method.FoundFilePath);
