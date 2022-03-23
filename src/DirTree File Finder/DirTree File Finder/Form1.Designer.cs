@@ -46,19 +46,28 @@
             this.ButtonChooseFolder = new System.Windows.Forms.Button();
             this.LabelStartingDirectory = new System.Windows.Forms.Label();
             this.LabelInput = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.LabelOutput = new System.Windows.Forms.Label();
             this.PanelOutput = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.LabelTimeSpent = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.LabelPathFile = new System.Windows.Forms.Label();
-            this.PanelOutputTree = new System.Windows.Forms.Panel();
-            this.LabelOutput = new System.Windows.Forms.Label();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.PanelInput.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.PanelOutput.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -70,14 +79,14 @@
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(800, 85);
+            this.TopPanel.Size = new System.Drawing.Size(1026, 85);
             this.TopPanel.TabIndex = 0;
             // 
             // Slogan
             // 
             this.Slogan.AutoSize = true;
             this.Slogan.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Slogan.Location = new System.Drawing.Point(321, 48);
+            this.Slogan.Location = new System.Drawing.Point(387, 48);
             this.Slogan.Name = "Slogan";
             this.Slogan.Size = new System.Drawing.Size(236, 19);
             this.Slogan.TabIndex = 2;
@@ -86,7 +95,7 @@
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(232, 12);
+            this.Logo.Location = new System.Drawing.Point(298, 12);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(62, 58);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +106,7 @@
             // 
             this.AppName.AutoSize = true;
             this.AppName.Font = new System.Drawing.Font("Leelawadee", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppName.Location = new System.Drawing.Point(310, 15);
+            this.AppName.Location = new System.Drawing.Point(376, 15);
             this.AppName.Name = "AppName";
             this.AppName.Size = new System.Drawing.Size(261, 34);
             this.AppName.TabIndex = 0;
@@ -123,7 +132,7 @@
             this.PanelInput.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelInput.Location = new System.Drawing.Point(0, 85);
             this.PanelInput.Name = "PanelInput";
-            this.PanelInput.Size = new System.Drawing.Size(288, 554);
+            this.PanelInput.Size = new System.Drawing.Size(288, 521);
             this.PanelInput.TabIndex = 1;
             // 
             // ButtonSearch
@@ -260,33 +269,55 @@
             this.LabelInput.TabIndex = 0;
             this.LabelInput.Text = "Input";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(288, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(406, 521);
+            this.panel1.TabIndex = 3;
+            // 
+            // LabelOutput
+            // 
+            this.LabelOutput.AutoSize = true;
+            this.LabelOutput.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelOutput.Location = new System.Drawing.Point(116, 17);
+            this.LabelOutput.Name = "LabelOutput";
+            this.LabelOutput.Size = new System.Drawing.Size(89, 29);
+            this.LabelOutput.TabIndex = 0;
+            this.LabelOutput.Text = "Output";
+            // 
             // PanelOutput
             // 
             this.PanelOutput.BackColor = System.Drawing.Color.Pink;
             this.PanelOutput.Controls.Add(this.listBox1);
-            this.PanelOutput.Controls.Add(this.LabelTimeSpent);
-            this.PanelOutput.Controls.Add(this.linkLabel1);
-            this.PanelOutput.Controls.Add(this.LabelPathFile);
-            this.PanelOutput.Controls.Add(this.PanelOutputTree);
-            this.PanelOutput.Controls.Add(this.LabelOutput);
+            this.PanelOutput.Controls.Add(this.panel5);
+            this.PanelOutput.Controls.Add(this.panel4);
+            this.PanelOutput.Controls.Add(this.panel2);
+            this.PanelOutput.Controls.Add(this.panel3);
             this.PanelOutput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelOutput.Location = new System.Drawing.Point(294, 85);
+            this.PanelOutput.Location = new System.Drawing.Point(694, 85);
             this.PanelOutput.Name = "PanelOutput";
-            this.PanelOutput.Size = new System.Drawing.Size(506, 554);
+            this.PanelOutput.Size = new System.Drawing.Size(332, 521);
             this.PanelOutput.TabIndex = 2;
             // 
             // listBox1
             // 
             this.listBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(14, 417);
+            this.listBox1.Location = new System.Drawing.Point(18, 64);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(472, 84);
+            this.listBox1.Size = new System.Drawing.Size(291, 393);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -294,50 +325,83 @@
             // 
             this.LabelTimeSpent.AutoSize = true;
             this.LabelTimeSpent.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimeSpent.Location = new System.Drawing.Point(22, 517);
+            this.LabelTimeSpent.Location = new System.Drawing.Point(105, 18);
             this.LabelTimeSpent.Name = "LabelTimeSpent";
-            this.LabelTimeSpent.Size = new System.Drawing.Size(85, 19);
+            this.LabelTimeSpent.Size = new System.Drawing.Size(18, 19);
             this.LabelTimeSpent.TabIndex = 4;
-            this.LabelTimeSpent.Text = "Time spent";
+            this.LabelTimeSpent.Text = "0";
             this.LabelTimeSpent.Click += new System.EventHandler(this.LabelTimeSpent_Click);
             // 
-            // linkLabel1
+            // panel3
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(27, 467);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(80, 20);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.panel3.Controls.Add(this.LabelOutput);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(332, 64);
+            this.panel3.TabIndex = 0;
             // 
-            // LabelPathFile
+            // panel2
             // 
-            this.LabelPathFile.AutoSize = true;
-            this.LabelPathFile.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPathFile.Location = new System.Drawing.Point(27, 439);
-            this.LabelPathFile.Name = "LabelPathFile";
-            this.LabelPathFile.Size = new System.Drawing.Size(65, 19);
-            this.LabelPathFile.TabIndex = 2;
-            this.LabelPathFile.Text = "Path file";
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.LabelTimeSpent);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 457);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(332, 64);
+            this.panel2.TabIndex = 1;
             // 
-            // PanelOutputTree
+            // panel4
             // 
-            this.PanelOutputTree.BackColor = System.Drawing.Color.LavenderBlush;
-            this.PanelOutputTree.Location = new System.Drawing.Point(31, 76);
-            this.PanelOutputTree.Name = "PanelOutputTree";
-            this.PanelOutputTree.Size = new System.Drawing.Size(439, 323);
-            this.PanelOutputTree.TabIndex = 1;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 64);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(18, 393);
+            this.panel4.TabIndex = 2;
             // 
-            // LabelOutput
+            // panel5
             // 
-            this.LabelOutput.AutoSize = true;
-            this.LabelOutput.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelOutput.Location = new System.Drawing.Point(216, 17);
-            this.LabelOutput.Name = "LabelOutput";
-            this.LabelOutput.Size = new System.Drawing.Size(89, 29);
-            this.LabelOutput.TabIndex = 0;
-            this.LabelOutput.Text = "Output";
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(309, 64);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(23, 393);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(20, 521);
+            this.panel6.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(388, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(18, 521);
+            this.panel7.TabIndex = 1;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Pink;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(20, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(368, 521);
+            this.panel8.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Leelawadee", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 19);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Time spent:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MainForm
             // 
@@ -345,7 +409,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ClientSize = new System.Drawing.Size(800, 639);
+            this.ClientSize = new System.Drawing.Size(1026, 606);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelOutput);
             this.Controls.Add(this.PanelInput);
             this.Controls.Add(this.TopPanel);
@@ -359,8 +424,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.PanelInput.ResumeLayout(false);
             this.PanelInput.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.PanelOutput.ResumeLayout(false);
-            this.PanelOutput.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -372,9 +441,7 @@
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Label Slogan;
         private System.Windows.Forms.Panel PanelInput;
-        private System.Windows.Forms.Panel PanelOutput;
         private System.Windows.Forms.Label LabelInput;
-        private System.Windows.Forms.Label LabelOutput;
         private System.Windows.Forms.Label LabelDirectory;
         private System.Windows.Forms.Button ButtonChooseFolder;
         private System.Windows.Forms.Label LabelStartingDirectory;
@@ -387,12 +454,20 @@
         private System.Windows.Forms.RadioButton RadioButtonBFS;
         private System.Windows.Forms.Label LabelInputMetodePencarian;
         private System.Windows.Forms.CheckBox CheckBoxFindAllOccurence;
-        private System.Windows.Forms.Label LabelTimeSpent;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label LabelPathFile;
-        private System.Windows.Forms.Panel PanelOutputTree;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label LabelOutput;
+        private System.Windows.Forms.Panel PanelOutput;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label LabelTimeSpent;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label1;
     }
 }
 

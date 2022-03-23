@@ -66,3 +66,19 @@ C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTr
 C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CopyComplete
 C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.exe
 C:\Users\Farrel Ahmad\source\repos\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.pdb
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.exe.config
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.exe
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\DirTree File Finder.pdb
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\AutomaticGraphLayout.dll
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\AutomaticGraphLayout.Drawing.dll
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\bin\Debug\Microsoft.Msagl.WpfGraphControl.dll
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.AssemblyReference.cache
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.SuggestedBindingRedirects.cache
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree_File_Finder.MainForm.resources
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree_File_Finder.Properties.Resources.resources
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.GenerateResource.cache
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CoreCompileInputs.cache
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.csproj.CopyComplete
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.exe
+C:\Users\HANA\Documents\Kuliah\Semester 4\Stima\TUBES 2 FIX BGT\Tubes2_13520047\src\DirTree File Finder\DirTree File Finder\obj\Debug\DirTree File Finder.pdb

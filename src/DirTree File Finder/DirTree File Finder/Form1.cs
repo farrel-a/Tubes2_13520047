@@ -57,7 +57,7 @@ namespace DirTree_File_Finder
             {
                 MessageBox.Show("File not found");
             }
-            this.LabelTimeSpent.Text = this.DFSTime.ToString();
+            this.LabelTimeSpent.Text = this.DFSTime.ToString() + " s";
         }
 
         private void Background_Worker(object sender,DoWorkEventArgs args)
@@ -154,6 +154,16 @@ namespace DirTree_File_Finder
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Process.Start(listBox1.SelectedItem.ToString());
+        }
+
+        private void gViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
