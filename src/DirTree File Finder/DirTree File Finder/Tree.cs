@@ -74,7 +74,10 @@ namespace DirTree_File_Finder
                         string edgeName = subs[i] + subs[i + 1];
                         if (!this.edge.Contains(edgeName))
                         {
-                            graph.AddEdge(subs[i], subs[i + 1]);
+                            Edge e = graph.AddEdge(subs[i], subs[i + 1]);
+                            e.SourceNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                            e.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                            e.TargetNode.Attr.Color = Microsoft.Msagl.Drawing.Color.Red; 
                             this.edge.Add(edgeName);
                         }
                     }
