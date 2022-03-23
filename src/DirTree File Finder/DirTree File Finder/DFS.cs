@@ -14,6 +14,7 @@ namespace DirTree_File_Finder
         public event FilePathFound FileLocation;
         private bool findAllOccurrences;
         private bool fileIsFound;
+        
 
         //CTOR
         public DFS(string filename, string current_path) : base(filename, current_path)
@@ -51,6 +52,9 @@ namespace DirTree_File_Finder
                     else if ((Path.GetFileName(c)).Equals(this.filename))
                     {
                         this.FileLocation(c); //path c is a file found
+
+                        this.foundFilePath.Add(c); //Add found path
+
                         this.fileIsFound = true;
 
                         if (findAll == false)
