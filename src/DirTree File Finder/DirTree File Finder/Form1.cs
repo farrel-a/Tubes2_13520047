@@ -179,6 +179,7 @@ namespace DirTree_File_Finder
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            listBox2.Items.Clear();
             this.dfs_method.Filename = TextBoxInputFileName.Text;
             this.dfs_method.Current_path = LabelDirectory.Text;
 
