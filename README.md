@@ -1,4 +1,3 @@
-# Tubes2_13520047
 # Tugas Besar 2 IF2211 Strategi Algoritma Pemanfaatan Algoritma BFS dan DFS dalam Implementasi Folder Crawling
 
 ## 13520047 - Hana Fathiyah
