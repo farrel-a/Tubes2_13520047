@@ -36,5 +36,5 @@ git clone https://github.com/farrel-a/Tubes2_13520047.git
 
 ## Cara Menjalankan Program
 1. Buka directory hasil clone repository
-2. Buka file bin dan jalankan program `.exe` nya
+2. Buka directory bin dan jalankan program `.exe` nya
 3. Masukkan start directory, nama file, metode pencarian (BFS/DFS), dan pencarian satu file atau keseluruhan.
