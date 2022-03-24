@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 
 namespace DirTree_File_Finder
 {
@@ -46,6 +47,12 @@ namespace DirTree_File_Finder
            {
                listBox1.Items.Add(path);
            });
+
+            listBox2.BeginInvoke((Action)delegate ()
+            {
+                listBox2.Items.Add(Directory.GetParent(path).ToString());
+            });
+
         }
         private void Completed(object sender, RunWorkerCompletedEventArgs args)
         {
@@ -185,6 +192,7 @@ namespace DirTree_File_Finder
             Process.Start(listBox1.SelectedItem.ToString());
         }
 
+
         private void gViewer1_Load(object sender, EventArgs e)
         {
 
@@ -198,6 +206,11 @@ namespace DirTree_File_Finder
         private void gViewer1_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Process.Start(listBox2.SelectedItem.ToString());
         }
     }
 }
