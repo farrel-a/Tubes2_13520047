@@ -38,3 +38,11 @@ git clone https://github.com/farrel-a/Tubes2_13520047.git
 1. Buka directory hasil clone repository
 2. Buka directory bin dan jalankan program `.exe` nya
 3. Masukkan start directory, nama file, metode pencarian (BFS/DFS), dan pencarian satu file atau keseluruhan.
+
+## Contoh Hasil
+
+![](https://i.ibb.co/TrQj7KJ/BFS.png)
+Menggunakan BFS
+
+![](https://i.ibb.co/L9cvDKX/DFS.png)
+Menggunakan DFS
