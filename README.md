@@ -1,13 +1,16 @@
 # Tugas Besar 2 IF2211 Strategi Algoritma Pemanfaatan Algoritma BFS dan DFS dalam Implementasi Folder Crawling
 
-## 13520047 - Hana Fathiyah
-## 13520053 - Yohana Golkaria Nainggolan
-## 13520110 - Farrel Ahmad
-
-<br>
+## Kelompok 45, My Tubes My Adventure
+|NIM|Nama|
+|---|---|
+|13520047|Hana Fathiyah|
+|13520053|Yohana Golkaria Nainggolan|
+|13520110|Farrel Ahmad|
 
 ## DirTree File Finder
 "_your truly systematic file finder_"
+
+<img src="https://i.ibb.co/JcDQkRK/Dir-Tree-File-Finder-6.png" width = "200">
 
 ## Deskripsi Program
 Sebuah aplikasi _GUI_ sederhana yang dapat memodelkan fitur dari _file explorer_ pada sistem operasi dengan memanfaatkan algoritma _Breadth First Search (BFS)_ dan _Depth First Search (DFS)_. Program ini dapat menelusuri folder-folder yang terdapat pada direktori untuk mendapatkan direktori yang diinginkan. Visualisasi pencarian berbentuk _path_ dan juga memanfaatkan kakas MSAGL.
@@ -43,6 +46,5 @@ git clone https://github.com/farrel-a/Tubes2_13520047.git
 
 ![](https://i.ibb.co/TrQj7KJ/BFS.png)
 Menggunakan BFS
-
 ![](https://i.ibb.co/L9cvDKX/DFS.png)
 Menggunakan DFS
