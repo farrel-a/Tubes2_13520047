@@ -16,7 +16,7 @@
 Sebuah aplikasi _GUI_ sederhana yang dapat memodelkan fitur dari _file explorer_ pada sistem operasi dengan memanfaatkan algoritma _Breadth First Search (BFS)_ dan _Depth First Search (DFS)_. Program ini dapat menelusuri folder-folder yang terdapat pada direktori untuk mendapatkan direktori yang diinginkan. Visualisasi pencarian berbentuk _path_ dan juga memanfaatkan kakas MSAGL.
 
 ## Requirements
-Program ini membutuhkan library MSAGL (Microsoft Automatic Graph Layout) yang harus diunduh menggunakan console pada NuGet Pacakge Manager.
+Program ini membutuhkan library MSAGL (Microsoft Automatic Graph Layout) yang harus diunduh menggunakan console pada NuGet Package Manager.
 Langkah instalasi:
 ```
 Install-Package AutomaticGraphLayout -Version 1.1.11
